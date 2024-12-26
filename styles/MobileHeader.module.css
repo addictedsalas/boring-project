@@ -1,0 +1,75 @@
+/* Mobile Header Styles */
+@media (max-width: 991px) {
+    .mobileHeader {
+        padding: 10px 0;
+    }
+
+    .mobileHeaderWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .mobileLogo {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .mobileControls {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .mobileMenuToggle {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburgerMenu {
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: transparent;
+    }
+
+    /* Hide desktop elements on mobile */
+    .desktopOnly {
+        display: none !important;
+    }
+
+    /* Adjust top bar for mobile */
+    .headerTopBar {
+        display: none;
+    }
+
+    /* Show only essential elements */
+    .mobileEssentials {
+        display: flex !important;
+    }
+
+    .logoWrapper {
+        display: block;
+        width: 200px;
+        height: 67px;
+        position: relative;
+    }
+
+    .logoLink {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .logoImage {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}

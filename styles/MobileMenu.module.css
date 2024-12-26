@@ -1,0 +1,172 @@
+/* Mobile Menu Styles */
+.mobile-menu {
+    position: relative;
+    z-index: 1000;
+}
+
+.menuToggle {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+    position: relative;
+}
+
+.mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    transition: left 0.3s ease;
+    z-index: 1001;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.mobile-menu-container.show {
+    left: 0;
+}
+
+.menuContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    z-index: 1001;
+    padding: 60px 20px 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.mobile-nav li {
+    margin: 15px 0;
+}
+
+.nav li {
+    margin: 15px 0;
+}
+
+.mobile-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+    color: #007bff;
+}
+
+.nav a:hover {
+    color: #007bff;
+}
+
+.mobile-menu-footer {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.menuFooter {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.socialLink {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.socialLink:hover {
+    color: #007bff;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
