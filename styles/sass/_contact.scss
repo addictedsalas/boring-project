@@ -71,10 +71,15 @@
 
         .form-clt {
             position: relative;
+            display: flex;
+            align-items: center;
+
             .icon {
                 position: absolute;
-                top: 18px;
-                left: 0;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                z-index: 1;
 
                 @include breakpoint(max-sm){
                   display: none;
@@ -85,12 +90,13 @@
                 }
             }
 
-            input{
+            select,
+            input {
                 width: 100%;
                 outline: none;
                 border: none;
-                padding: 20px 30px;
-                color: $text-color;
+                padding: 15px 30px 15px 35px;
+                color: #333;
                 background-color: transparent;
                 text-transform: capitalize;
                 font-weight: 500;
@@ -99,6 +105,10 @@
                 @include breakpoint(max-sm){
                     padding: 15px 20px;
                 }
+            }
+
+            input::placeholder {
+                color: #999;
             }
         }
 
@@ -128,6 +138,122 @@
 
             &::before {
                 background-color: $header-color;
+            }
+        }
+
+        .file-upload-section {
+            .upload-area {
+                .form-group {
+                    margin-bottom: 10px;
+                    
+                    .form-clt {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+
+                        .icon {
+                            position: absolute;
+                            top: 50%;
+                            left: 10px;
+                            transform: translateY(-50%);
+                            z-index: 1;
+
+                            i {
+                                color: $header-color;
+                            }
+                        }
+
+                        input[type="file"] {
+                            width: 100%;
+                            outline: none;
+                            border: none;
+                            padding: 12px 30px 12px 35px;
+                            color: #333;
+                            background-color: transparent;
+                            border-bottom: 1px solid $text-color;
+                            cursor: pointer;
+
+                            &::-webkit-file-upload-button {
+                                visibility: hidden;
+                                display: none;
+                            }
+                        }
+
+                        input[type="file"]::placeholder {
+                            color: #999;
+                        }
+                    }
+                }
+
+                .file-preview {
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    img {
+                        max-width: 50px;
+                        height: auto;
+                    }
+
+                    span {
+                        flex: 1;
+                    }
+
+                    .remove-file {
+                        background: none;
+                        border: none;
+                        color: $text-color;
+                        cursor: pointer;
+                        padding: 5px;
+
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+
+        .print-location-section {
+            .form-clt {
+                position: relative;
+
+                .icon {
+                    position: absolute;
+                    left: 10px;
+                    z-index: 1;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        color: $header-color;
+                    }
+                }
+
+                select.form-select {
+                    width: 100%;
+                    height: 50px;
+                    padding: 10px 35px;
+                    border: none;
+                    border-bottom: 1px solid $text-color;
+                    border-radius: 0;
+                    background-position: right 0.75rem center;
+                    
+                    &:focus {
+                        box-shadow: none;
+                        border-color: $header-color;
+                    }
+                }
+
+                select.form-select option {
+                    color: #333;
+                }
+
+                select.form-select option::placeholder {
+                    color: #999;
+                }
             }
         }
     }
