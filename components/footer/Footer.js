@@ -49,12 +49,16 @@ const Footer = () => {
                                     </p>
                                     <ul className="contact-list">
                                         <li>
+                                            <i className="fa-sharp fa-solid fa-location-dot"></i>
+                                            <span>COLLEGE PARK, MD</span>
+                                        </li>
+                                        <li>
                                             <i className="fa-sharp fa-solid fa-phone-volume"></i>
-                                            <a href="tel:+17542514122">+1 (754) 251-4122</a>
+                                            <a href="tel:+17863029144">(786) 302-9144</a>
                                         </li>
                                         <li>
                                             <i className="fa-sharp fa-solid fa-envelope"></i>
-                                            <a onClick={ClickHandler} href="mailto:support@boringtees.com" className="link">support@boringtees.com</a>
+                                            <a onClick={ClickHandler} href="mailto:hello@boringtees.co" className="link">hello@boringtees.co</a>
                                         </li>
                                     </ul>
                                 </div>
